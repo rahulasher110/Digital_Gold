@@ -1,5 +1,6 @@
 import 'package:digital_gold/utils/app_assets.dart';
 import 'package:digital_gold/utils/app_colors.dart';
+import 'package:digital_gold/utils/app_dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -18,6 +19,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
+    print(AppDimensions.screenHeight);
+    print(AppDimensions.screenWidth);
   }
 
   @override
