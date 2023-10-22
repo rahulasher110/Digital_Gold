@@ -56,7 +56,7 @@ class _ReferAndEarnScreenState extends State<ReferAndEarnScreen> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                      children: const [
                         Text(
                           'Invite all your friends!',
                           style: TextStyle(
