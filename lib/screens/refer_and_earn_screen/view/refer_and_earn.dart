@@ -47,7 +47,7 @@ class _ReferAndEarnScreenState extends State<ReferAndEarnScreen> {
                   ),
                   const SizedBox(height: 20),
                   Container(
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     margin: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         border: Border.all(
