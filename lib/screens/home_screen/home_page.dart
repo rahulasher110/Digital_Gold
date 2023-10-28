@@ -36,6 +36,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       appBar: AppBar(
         backgroundColor: AppColors.primaryColor,
         elevation: 0,
+        leading: const SizedBox.shrink(),
         title: const Text(
           'Buy Gold',
           style: TextStyle(

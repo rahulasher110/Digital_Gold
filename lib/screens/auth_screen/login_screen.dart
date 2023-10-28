@@ -1,3 +1,4 @@
+import 'package:digital_gold/screens/auth_screen/otp_verification_screen.dart';
 import 'package:digital_gold/utils/app_colors.dart';
 import 'package:digital_gold/widgets/dg-button.dart';
 import 'package:digital_gold/widgets/regular_text.dart';
@@ -14,6 +15,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final TextEditingController _mobileCtrl = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -41,6 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const SizedBox(height: 20),
                 TextFormField(
+                  controller: _mobileCtrl,
                   autofocus: false,
                   style: const TextStyle(
                       fontSize: 22.0, color: AppColors.primaryColor),
@@ -96,8 +99,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: TextStyle(color: AppColors.secondaryTextColor))
               ])),
               const SizedBox(height: 10),
-              const DgButton(
+              DgButton(
                 buttonName: 'Proceed',
+                onPressed: () => Get.to(() => OtpVerificationScreen(
+                      mobileNumber: _mobileCtrl.text,
+                    )),
               )
             ],
           ),

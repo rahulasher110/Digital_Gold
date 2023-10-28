@@ -8,11 +8,13 @@ class DgButton extends StatefulWidget {
   final String buttonName;
   final double? widthMaxSize;
   final double? widthMinSize;
+  final VoidCallback onPressed;
 
   const DgButton(
       {super.key,
       required this.buttonName,
       this.widthMaxSize,
+      required this.onPressed,
       this.widthMinSize});
 
   @override
@@ -25,7 +27,7 @@ class _DgButtonState extends State<DgButton> {
     return SizedBox(
         width: AppDimensions.screenWidth,
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: widget.onPressed,
           style: ElevatedButton.styleFrom(
               maximumSize: Size(widget.widthMaxSize ?? 64, 146),
               minimumSize: Size(widget.widthMinSize ?? 64, 46),
