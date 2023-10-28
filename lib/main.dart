@@ -1,3 +1,4 @@
+import 'package:digital_gold/screens/auth_screen/login_screen.dart';
 import 'package:digital_gold/screens/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const DashboardPage(),
+      home: const LoginScreen(),
     );
   }
 }
